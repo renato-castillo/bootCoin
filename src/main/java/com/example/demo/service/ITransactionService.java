@@ -5,5 +5,7 @@ import reactor.core.publisher.Mono;
 
 public interface ITransactionService {
 
-    Mono<Transaction> requestBuy(Transaction transaction);
+    Mono<Transaction> create(Transaction transaction);
+
+    Mono<Transaction> acceptRequest(Transaction transaction);
 }

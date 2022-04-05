@@ -5,6 +5,8 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @Document
@@ -17,11 +19,15 @@ public class Transaction {
 
     private String paymentMethod;
 
-    private Boolean accepted;
+    private Boolean accepted = false;
 
     private String transactionId;
 
     private String documentOrigin;
 
     private String documentDestination;
+
+    private LocalDateTime transactionDate;
+
+    private LocalDateTime transactionAcceptedDate;
 }
