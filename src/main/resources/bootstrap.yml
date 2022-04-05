@@ -1,3 +1,7 @@
 spring:
     application:
-        name: businessAccount-service
+        name: bootcoin
+    cloud:
+        config:
+            enabled: true
+            uri: http://localhost:8888
